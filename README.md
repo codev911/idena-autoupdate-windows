@@ -11,5 +11,5 @@ usage :
     ```
     git clone https://github.com/codev911/idena-autoupdate-node
     ```
-2. Jalankan `autoupdate.ps1` bersama dengan Client Wallet idenanya.
+2. Jalankan `autoupdate.ps1` dengan cara `Klik kanan > Run with PowerShell` bersama dengan Client Wallet idenanya.
 3. Biarkan berjalan.
