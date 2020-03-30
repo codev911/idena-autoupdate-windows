@@ -50,7 +50,7 @@ While($true){
 		echo 'Client updated to version :'
 		$idenalastclient
 	}else{
-		echo 'Everything up to date, rechecking every ± 10 Minutes'
+		echo 'Everything up to date, rechecking every est less or more 10 Minutes'
 		Start-Sleep -s $randomtime
 	} 
 }
