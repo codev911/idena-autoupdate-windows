@@ -1,5 +1,5 @@
 # idena-autoupdate-windows
-Ini adalah script powershell auto update untuk idena client dan node internal idena client untuk windows, cocok untuk RDP y kawan-kawan. Sudah saya test jangka pendek di RDP Azure windows 10 pro saya. Dikhususkan hanya untuk pengguna RDP yang nodenya pakai internal, kalau node remote bakal sia" update node localnya.
+Ini adalah script powershell auto update untuk idena client dan node internal idena client untuk windows, cocok untuk RDP y kawan-kawan. Sudah saya test di RDP Azure windows 10 pro saya. Dikhususkan hanya untuk pengguna RDP yang nodenya pakai internal, kalau node remote bakal sia" update node localnya.
 
 yg baik hati tlng donasinya hehe :3
 
