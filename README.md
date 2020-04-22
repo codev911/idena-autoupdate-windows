@@ -13,3 +13,11 @@ usage :
     ```
 2. Jalankan `autoupdate.ps1` dengan cara `Klik kanan > Run with PowerShell` bersama dengan Client Wallet idenanya.
 3. Biarkan berjalan.
+
+fix jika tidak jalan :
+
+To remove the execution policy for a Scope:
+```
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
+```
+fix source : https://docs.microsoft.com/en-gb/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7
