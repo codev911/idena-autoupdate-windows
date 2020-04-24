@@ -1,4 +1,4 @@
-function get-fileversion {
+﻿function get-fileversion {
   param([System.IO.FileInfo] $fileItem)
   $verInfo = $fileItem.VersionInfo
   "{0}.{1}.{2}" -f
@@ -9,6 +9,7 @@ function get-fileversion {
 
 While($true){
 	echo "Checking IDENA Node & Client ..."
+	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 	$ideapi = Invoke-RestMethod -Uri 'https://api.github.com/repos/idena-network/idena-go/releases/latest'
 	$ideacpi = Invoke-RestMethod -Uri 'https://api.github.com/repos/idena-network/idena-desktop/releases/latest'
 	$idenapinow = & $env:USERPROFILE\AppData\Roaming\Idena\node\idena-go.exe -v
@@ -29,6 +30,7 @@ While($true){
 		Stop-Process -Name "Idena"
 		cd $env:USERPROFILE\AppData\Roaming\Idena\node
 		rm .\idena-go.exe
+		[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 		Invoke-WebRequest -OutFile idena-go.exe https://github.com/idena-network/idena-go/releases/download/$idenanoderes/idena-node-win-$idenalastnode.exe
 		echo 'Running...'
 		cd $env:USERPROFILE
@@ -41,6 +43,7 @@ While($true){
 		echo 'Updating...'
 		Stop-Process -Name "Idena"
 		cd $env:USERPROFILE\Downloads
+		[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 		Invoke-WebRequest -OutFile idena-latest-installer.exe https://github.com/idena-network/idena-desktop/releases/download/$idenaclientres/idena-client-win-$idenalastclient.exe
 		Start-Process .\idena-latest-installer.exe /S -NoNewWindow -Wait -PassThru
 		rm .\idena-latest-installer.exe
@@ -50,7 +53,7 @@ While($true){
 		echo 'Client updated to version :'
 		$idenalastclient
 	}else{
-		echo 'Everything up to date, rechecking every est less or more 10 Minutes'
+		echo 'Everything up to date, rechecking every ± 10 Minutes'
 		Start-Sleep -s $randomtime
 	} 
 }
