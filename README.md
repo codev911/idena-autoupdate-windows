@@ -3,7 +3,7 @@ Ini adalah script powershell auto update untuk idena client dan node internal id
 
 yg baik hati tlng donasinya hehe :3
 
-DNA => 0xbd5ca7ee8b302deb0a1a7f72b02efb52ed7fe86e
+DNA => 0x56114513608565e4f8161b8faebb96fe37f13d83
 
 usage :
 
